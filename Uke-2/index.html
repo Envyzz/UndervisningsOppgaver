@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .text {
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="emptyDiv"></div>
+
+
+    <div class="text" onclick="sendText(this, 'khaki')">Text 1</div>
+    <div class="text" onclick="sendText(this, 'blue')">Text 2</div>
+    <div class="text" onclick="sendText(this, 'red')">Text 3</div>
+    <div class="text" onclick="sendText(this, 'purple')">Text 4</div>
+
+    <div><button onclick="deleteText()">Delete Text!</button></div>
+
+
+    <script>
+        function sendText(element, color) {
+            document.getElementById('emptyDiv').innerHTML += element.innerHTML;
+            element.innerHTML = `<div style="background-color: ${color};"> ${element.innerHTML} </div>`;
+            console.log(sendText)
+        }
+        function deleteText() {
+            document.getElementById('emptyDiv').innerHTML = '';
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+<!--Lag en side som har 5 diver med en tekst på. 
+lag en div som er tom. 
+og lag EN funskjon til divene -> Den skal ta det som står på knappen og printe ut i den tomme diven. 
+ta med en parameter til i funksjonen og bruk denne til noe du velger. f.eks. lage farge på diven eller noe annet du selv ønsker. 
+Feks. du trykket på div1 hvis man trykket på diven det står : div1.
+-->
