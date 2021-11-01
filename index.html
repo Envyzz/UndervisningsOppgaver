@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            font-size: 25px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #rightOrWrong {
+            font-size: 50px;
+        }
+
+        li {
+            position: relative;
+            left: -20px;
+            font-size: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hvor gammel er Sebastian?</h1>
+    <h3>Skriv inn svaret du tror er riktig i boksen under.</h3>
+    <ol>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+    </ol>
+
+
+    <input onchange="anwserCheck(this)">
+    <div id="rightOrWrong"></div>
+
+
+    <script>
+        function anwserCheck(input) {
+            if (input.value == "23") {
+                document.getElementById('rightOrWrong').innerHTML = "Riktig!"
+            }
+            else {
+                document.getElementById('rightOrWrong').innerHTML = "Feil, prøv igjen!"
+            }
+        }
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>
+<!--Lag en side som viser en input hvor bruker kan gjette ett tall eller ett ord.
+skal vises om det er gjettet riktig eller feil. 
+med bruk av IF-setning-->
